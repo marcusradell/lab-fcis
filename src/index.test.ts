@@ -9,6 +9,9 @@ type Tweet = {
 
 export function createTimeline(tweets: Tweet[]) {
   return {
+    getTweets() {
+      return tweets;
+    },
     add(tweetsToAdd: Tweet[]) {
       const existingIds = tweets.map(({ tid }) => tid);
       const newTweets = tweetsToAdd.filter((tweetToAdd) =>
