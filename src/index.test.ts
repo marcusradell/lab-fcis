@@ -22,6 +22,6 @@ export function createTimeline(tweets: Tweet[]) {
   };
 }
 
-test("It works!", () => {
-  deepEqual(1, 1);
+test("Empty Timeline", () => {
+  deepEqual(createTimeline([]).getTweets(), []);
 });
